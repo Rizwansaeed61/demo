@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#001c3b", "primary-fixed": "#d5e3ff", "surface-container-high": "#dee8ff", "on-primary-container": "#84b1f5", "surface-variant": "#d8e3fb", "secondary-fixed-dim": "#90da60", "on-tertiary": "#ffffff", "on-secondary-container": "#327200", "surface-container-low": "#f0f3ff", "on-primary-fixed-variant": "#094784", "surface-container-lowest": "#ffffff", "surface-container-highest": "#d8e3fb", "on-secondary": "#ffffff", "on-secondary-fixed": "#092100", "inverse-on-surface": "#ecf1ff", "inverse-primary": "#a6c8ff", "primary-container": "#004380", "secondary-container": "#aaf779", "surface-tint": "#2e5f9e", "on-background": "#111c2d", "on-surface-variant": "#424750", "secondary-fixed": "#aaf779", "surface-dim": "#cfdaf2", "on-tertiary-fixed": "#001d31", "error-container": "ffdad6", "on-tertiary-fixed-variant": "#004b73", "surface-container": "#e7eeff", "primary-fixed-dim": "#a6c8ff", "on-primary": "#ffffff", "surface-bright": "#f9f9ff", "secondary": "#2f6c00", "outline": "#737781", "on-error-container": "#93000a", "surface": "#f9f9ff", "inverse-surface": "#263143", "background": "#f9f9ff", "on-secondary-fixed-variant": "#225100", "tertiary-fixed-dim": "#93ccff", "outline-variant": "#c2c6d2", "tertiary": "#00304c", "tertiary-fixed": "#cce5ff", "primary": "#002d59", "on-error": "#ffffff", "on-tertiary-container": "#5ab7fe", "error": "#ba1a1a", "on-surface": "#111c2d", "tertiary-container": "#00476e" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xl": "2rem", "space-2xs": "0.25rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "container-max": "72rem", "space-2xl": "3rem", "gutter-mobile": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "price-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "price-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "price-md": ["16px", { "lineHeight": "20px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "price-lg": ["24px", { "lineHeight": "28px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full bg-tertiary text-on-tertiary px-gutter-desktop py-space-xs"><div class="max-w-container-max mx-auto flex items-center justify-center text-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">local_shipping</span><p class="font-label-md text-label-md tracking-wide">Free shipping for prepaid orders above ₹999 | Use code <span class="font-bold tracking-wider text-secondary-fixed">DERMA10</span> for 10% off</p></div></div><div class="h-20 w-full bg-surface-container-lowest"><div class="max-w-container-max mx-auto h-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="DermaPure Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UFuxMcsppQCiUV-eN0SRebfor51rqNyAPX4XHSBX_0KTrA3fcrA4A0_nJOcVZDXXXpgvpio7mfr0Ey0MupZ1ten9ruGKJmHUu5B4-ywbWI3qxQJxpeLWngybp41FGSluMwzhGa2hzcPXZuOgWmFSiW7a-T4t_wXcWm1ElrF_-jcAiu0CbC0bNqZ73VaqCXWewiNb4PtkoEwC2x3MIofNcwG1WrMblq8h2xSJbgtPcRaG7HXEO8NCLdWFXO"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">DermaPure</span></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-bold border-b-2 border-primary"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="shop-products" href="#">Shop / Products</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="build-routine" href="#">Build Routine</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="skin-concern-quiz" href="#">Skin Concern Quiz</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="about-us" href="#">About Us</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="blog" href="#">Blog</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="contact" href="#">Contact</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="faqs" href="#">FAQs</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="bg-surface-container-low pl-9 pr-4 py-space-xs rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary w-48 lg:w-56 transition-all" placeholder="Search clinical formulations..." type="text"/></div><div class="relative hidden lg:block"><select aria-label="Skin Type Selector" class="appearance-none bg-surface-container-low pl-3 pr-8 py-space-xs rounded-full font-label-md text-label-md text-on-surface cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary"><option value="all">Select Skin Type</option><option value="dry-sensitive">Dry &amp; Sensitive</option><option value="acne-prone">Acne Prone</option><option value="normal-oily">Normal to Oily</option></select><span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span></div><a aria-label="User Account" class="p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" data-path="user-account" href="#"><span class="material-symbols-outlined text-[22px]">person</span></a><a aria-label="Wishlist" class="p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span></a><a aria-label="Shopping Cart" class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 bg-secondary text-on-secondary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="w-full bg-surface-container-low shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="max-w-container-max mx-auto px-gutter-desktop py-space-xs flex items-center justify-start gap-space-lg overflow-x-auto"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline shrink-0">Categories</span><nav class="flex items-center gap-space-lg shrink-0" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="cleansers" href="#">Cleansers</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="moisturizers" href="#">Moisturizers</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="sun-protection" href="#">Sun Protection</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="serums-treatments" href="#">Serums &amp; Treatments</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="body-care" href="#">Body Care</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="derm-bundles" href="#">Derm Bundles</a></nav></div></div></header><main class="w-full pt-36 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Clinical Accent -->
+<div class="w-full bg-surface-container-low py-space-sm">
+<div class="max-w-container-max mx-auto px-gutter-desktop flex items-center justify-between">
+<nav class="flex items-center gap-space-xs text-outline">
+<a class="font-label-md text-label-md hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="font-label-md text-label-md hover:text-primary transition-colors" href="#">Products</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-bold">All Formulations</span>
+</nav>
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Clinical Batch 2025 • Verified Formulations</span>
+</div>
+</div>
+</div>
+<!-- Category Header Banner -->
+<section class="w-full bg-surface-container-lowest py-space-xl shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="max-w-3xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full">Derm Certified</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wide">#1 Clinically Formulated in India</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Clinically Proven Dermatological Formulations</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Targeted skin barrier solutions developed with leading dermatologists. 100% fragrance-free, hypoallergenic, non-comedogenic, and engineered for reactive skin.
+          </p>
+</div>
+<!-- Efficacy Mini Pill Card -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-md shrink-0 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<div>
+<p class="font-price-md text-price-md text-primary">94% Barrier Efficacy</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated by clinical patient trials</p>
+</div>
+</div>
+</div>
+<!-- Quick Concern Filter Carousel Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pt-space-lg no-scrollbar">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap shadow-sm transition-all hover:bg-primary-container">
+          All Products (16)
+        </button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap hover:bg-surface-container transition-all">
+          Dry Skin
+        </button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap hover:bg-surface-container transition-all">
+          Sensitive Skin
+        </button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap hover:bg-surface-container transition-all">
+          Acne-Prone
+        </button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap hover:bg-surface-container transition-all">
+          Oily &amp; Combination
+        </button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap hover:bg-surface-container transition-all">
+          Barrier Repair
+        </button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap hover:bg-surface-container transition-all">
+          Sun Defense
+        </button>
+</div>
+</div>
+</section>
+<!-- Collection Main Layout (Split View) -->
+<div class="max-w-container-max mx-auto px-gutter-desktop py-space-xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Sidebar Filters -->
+<aside class="lg:col-span-3 flex flex-col gap-space-lg sticky top-40">
+<!-- Filter Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Filter Archive</span>
+<button class="font-label-sm text-label-sm text-secondary uppercase tracking-wider hover:underline">Reset All</button>
+</div>
+<!-- Filter Section 1: Skin Concern -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wide">Skin Concern</h4>
+<div class="flex flex-col gap-space-2xs pt-space-2xs">
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Dry Skin</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">6</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Sensitive / Redness</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">5</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Acne &amp; Blemishes</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">4</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Dehydration</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">8</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Sun Protection</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">3</span>
+</label>
+</div>
+</div>
+<!-- Filter Section 2: Product Category -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wide">Category</h4>
+<div class="flex flex-col gap-space-2xs pt-space-2xs">
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Cleansers</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">4</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Moisturisers</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">5</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Serums &amp; Treatments</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">3</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Sun Protection</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">2</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Regimen Kits</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">2</span>
+</label>
+</div>
+</div>
+<!-- Filter Section 3: Key Actives -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wide">Key Actives</h4>
+<div class="flex flex-wrap gap-space-2xs pt-space-2xs">
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-1 rounded-full cursor-pointer hover:bg-primary hover:text-on-primary transition-colors">Ceramides</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-1 rounded-full cursor-pointer hover:bg-primary hover:text-on-primary transition-colors">Hyaluronic Acid</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-1 rounded-full cursor-pointer hover:bg-primary hover:text-on-primary transition-colors">Niacinamide</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-1 rounded-full cursor-pointer hover:bg-primary hover:text-on-primary transition-colors">Salicylic Acid 2%</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-1 rounded-full cursor-pointer hover:bg-primary hover:text-on-primary transition-colors">Zinc PCA</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-1 rounded-full cursor-pointer hover:bg-primary hover:text-on-primary transition-colors">Centella Asiatica</span>
+</div>
+</div>
+<!-- Filter Section 4: Price Range Slider -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wide">Price Range</h4>
+<span class="font-label-md text-label-md text-primary font-bold">₹299 - ₹1,500</span>
+</div>
+<div class="pt-space-xs">
+<input class="w-full accent-primary bg-surface-container rounded-lg cursor-pointer" max="1500" min="299" type="range" value="1200"/>
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>₹299</span>
+<span>₹1,500</span>
+</div>
+</div>
+</div>
+<!-- Filter Section 5: Clinical Claims -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wide">Dermatological Standards</h4>
+<div class="flex flex-col gap-space-2xs pt-space-2xs">
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">100% Soap-Free</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Fragrance-Free</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Paraben-Free</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary">Dermatologist Tested</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Dermatologist Consultation Promo Widget -->
+<div class="bg-primary text-on-primary p-space-md rounded-lg shadow-sm flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-container rounded-full opacity-50 pointer-events-none"></div>
+<span class="material-symbols-outlined text-[28px] text-secondary-fixed">medical_services</span>
+<h4 class="font-headline-sm text-headline-sm">Free Skin Assessment</h4>
+<p class="font-body-sm text-body-sm text-primary-fixed leading-relaxed">Connect with our certified dermatologist team for a tailored routine prescription.</p>
+<a class="mt-space-xs inline-flex items-center justify-center font-label-md text-label-md bg-secondary text-on-secondary px-space-md py-space-xs rounded-full hover:bg-secondary-fixed transition-colors" href="#">
+            Start Diagnostic
+          </a>
+</div>
+</aside>
+<!-- Right Main Products Content -->
+<main class="lg:col-span-9 flex flex-col gap-space-lg">
+<!-- Top Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">Showing 16 Formulations</span>
+<span class="hidden md:inline-block bg-surface-variant text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">All In-Stock</span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-between sm:justify-end">
+<!-- Sort dropdown -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-outline">Sort By:</span>
+<div class="relative">
+<select aria-label="Sort products" class="appearance-none bg-surface-container-low pl-3 pr-8 py-space-xs rounded-full font-label-md text-label-md text-primary cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary shadow-sm">
+<option>Dermatologist Recommended</option>
+<option>Best Sellers</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Highest Rated</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- View switch -->
+<div class="flex items-center bg-surface-container-low rounded-full p-0.5 shadow-sm">
+<button aria-label="Grid view" class="p-1 rounded-full bg-surface-container-lowest text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button aria-label="List view" class="p-1 rounded-full text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Grid (8 Detailed Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- Card 1: Gentle Skin Cleanser -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<!-- Top Badges -->
+<div class="flex items-center justify-between">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full">Best Seller</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Dry &amp; Sensitive</span>
+</div>
+<!-- Product Image -->
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Clinical studio photograph of DermaPure Gentle Skin Cleanser bottle in clean modern medical packaging with blue and vibrant green accents on a soft cool-slate surface with pure white lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvhgermsxN5SzDK6n8gvxUVPT2RB7oJLh8_SJ3s8pkBh3unT_h-FFFGlUw9FWqbt_OA5mWFBrqvOeeA7QVesygq6ufD5fmzbz6A3ZrZSbcGBPHvlJJ70zZw4Qpc67MWV-jOZ7cYKyXzgYvEFh9JtzNZvLOnmEo-ljrDicMvO044KY0oY7aCSGljus9rXtQRJhrZCmA6bv_N4cwy6oblNGL67aFmsr14Rnwsv64uWrVSxG4JwgyTUBSig"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Clinical Review & Rating -->
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(200)</span>
+</div>
+<!-- Product Title & Clinical Metric -->
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Gentle Skin Cleanser</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Soap-free hydrating formula with essential ceramides to respect natural skin barrier.</p>
+<!-- Efficacy Pill -->
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">94% felt gently cleansed</span>
+</div>
+<!-- Volume Selector -->
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">125ml</button>
+<button class="px-space-xs py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container">250ml</button>
+</div>
+</div>
+<!-- Price & Add CTA -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹335</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">10% OFF M.R.P.</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Card 2: Rich Hydrating Daily Cream -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full font-bold">Step 02: Hydrate</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Dry Skin</span>
+</div>
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Dermatological product photography of DermaPure Rich Hydrating Daily Cream jar on soft light-blue pedestal in a minimal clinical aesthetic studio setting with soothing botanical leaf accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46YYZsolfAmEJIyxineAC8Gkb-XeH5wcydrYhBpc43UxI6Nr9PkuLzkhrgrmuaUraQNTTzdqu25J81DfbBp4MDOIKllTZ72f0j75S-feSW3I30Uenyua5JPWhe46hHU03qinX3Lxx1g66VaiWXcZpycNb50Wc4pvjy5P0NlLMuY1IZ2BRUXJ0iuPDip0jFUAQPDR4t85T04KcebAE2-DkOfMWI9fOanYUIBgcX1KWyipfXP6ljMNiag"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(412)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Rich Hydrating Daily Cream</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Restores vital lipid barrier within 48 hours. Enriched with 3 essential ceramides and niacinamide.</p>
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">48-Hr Moisture Lock</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">100g</button>
+<button class="px-space-xs py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container">200g</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹375</span>
+<span class="font-label-sm text-label-sm text-outline">Incl. all taxes</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Card 3: Daily Sunblock SPF 50+ PA++++ -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full">Sun Defense</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Zero Cast</span>
+</div>
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Modern clinical sunscreen tube of DermaPure Daily Sunblock SPF 50+ PA++++ in ultra-clean white and clinical deep navy packaging resting on clinical frosted glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj9ornWafujv_MisHvYhHXGbpVFfhQLW2VnTuVW3KxiClrTkmRS45mR6aebzjTN6hhroQbFTR6zaIVsIK_DdL0x9rGzRklw3TAQLoVHB8oRjLYhUyAXmkHayu65G6uEh3PzaPyYn1pri7sEYX9h0rRT-o_AUdGYdkaWlKsUt7iI9ViEgtu3aM9TLXEgPmOAKinoR7699nJ1Dcxp_zkQUJO9_I448u51-DbFV-4CTLuiLwO8TAlWe1ygA"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">5.0</span>
+<span class="font-body-sm text-body-sm text-outline">(188)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Daily Sunblock SPF 50+ PA++++</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Ultralight photostable UV filters. Leaves zero white cast, non-sticky matte finish for sensitive skin.</p>
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Broad Spectrum UVA/UVB</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">50ml</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹545</span>
+<span class="font-label-sm text-label-sm text-outline">Incl. all taxes</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Card 4: Restoring Night Barrier Serum -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-surface-variant text-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full font-bold">10% Niacinamide</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Acne &amp; Marks</span>
+</div>
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Clinical serum dropper bottle of DermaPure Restoring Night Barrier Serum with 10% Niacinamide and Zinc against a clean scientific slate background with pristine studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAerXbQM64nwjqSr6ePeCGukr8gma0Z8k9EcrlfoFKahod_ugHNr4bZUhFiiJTT72u8I3A5-BkHZy-tsP_Z_vimlNT7B2wASTE-PhVjGdQR_bVDOqfAse3pSone_ETufQyR7Y1wt-eJBLZnaRtfPb3PVZV7E_DNqw88Et-hDUNq_R37EVk7G6kTrkaXscMkFhMCpNVBuKmXtWKdJOQ1HIAchQeB-eF7-_qx0elhw6AMUkr5tUmJz0npFg"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.7</span>
+<span class="font-body-sm text-body-sm text-outline">(154)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Restoring Night Barrier Serum</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Concentrated serum with 10% pure Niacinamide and Zinc PCA to fade post-acne blemishes and balance sebum.</p>
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Visibly fades marks in 2 wks</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">30ml</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹620</span>
+<span class="font-label-sm text-label-sm text-outline">Incl. all taxes</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Card 5: Foaming Acne Relief Wash -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full">2% Salicylic Acid</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Oily &amp; Acne</span>
+</div>
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Pharmaceutical aesthetic pump bottle of DermaPure Foaming Acne Relief Wash with 2% Salicylic Acid on a pure white background with cool medical green lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrn__9FKbmf3JgtPU22QjAwdVu4DGaevSxlhP3PA4MvQqUPYz6spZyK-oyPiUzH2Y66-Bphnp8l7SEW3PFssydS4j7vfCAnQgQk5wn9mYEErsIygU_pCNKZZqB0ArACh0SBwfZr6HZARe50gQ47vC7oqMSPBoEzTXKEEdHkMGQVuw_hpD7oyrIXb0tu2KJ1zs7Cs7ZHUeR15Rs88_vZmvG_vBM7KrolpQ2QpI3-JS9QdhJTh6eUUadsQ"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(89)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Foaming Acne Relief Wash</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Pore-clearing BHA wash unclogs micro-comedones without stripping delicate epidermal moisture.</p>
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Unclogs congested pores</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">150ml</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹395</span>
+<span class="font-label-sm text-label-sm text-outline">Incl. all taxes</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Card 6: Soothing Cica Moisture Gel -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full font-bold">Redness Relief</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Sensitive Skin</span>
+</div>
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Minimalist clinical skincare tube of DermaPure Soothing Cica Moisture Gel on clear acrylic block with subtle natural lighting and pure clean laboratory background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC36u_vJpLzIIRZbp94f6i9N0Vpf6aBJRX3gnCeM0bzQYTuqeHqCtg4_tkgZsHkCSQC7WcQ_E8TE3k5dlIhHMh876FOK2B92VG5iRDV9_XyNrmUC9C-FepBP8SFIfX_W_MqD-Tw7hQ0QMRpfXBjnoUSiTbEA4lJVaT4QGBQNOIzMhMjrtv9a9xK5mlc2CQZOEsSAFf8XOBhLeGIMJ_qb1S9QWHMaIU8VJr5vqn84GCe2QbWHZlNfctJMg"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(112)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Soothing Cica Moisture Gel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Cooling Centella Asiatica gel immediately calms reactive redness, rosacea flush, and burning sensation.</p>
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Immediate cooling calm</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">75ml</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹480</span>
+<span class="font-label-sm text-label-sm text-outline">Incl. all taxes</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Card 7: Complete 3-Step Barrier Restoration Kit -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all md:col-span-2 xl:col-span-2">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full">Clinical Bundle</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full font-bold">SAVE 15%</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center my-space-xs">
+<div class="md:col-span-5 h-48 bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center p-2">
+<img class="object-contain h-40 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Clinical bundle showcase of DermaPure 3-Step Barrier Restoration Kit containing cleanser, rich hydrating cream, and broad spectrum sunblock in premium medical packaging box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1eD2R1rMIfV5devsEUYQOwtuSyd-RS9KdUxbhj3r937e9idL8Mp-I0JZfD2BnhG6wExvL3sAPAj6iW_fOgIwItPXAHJS4su_7TVbhYcygzdp0JOruLGg-k-bOFhF63lWqHk8dEGmUK3zu9meUUjHv9BOoMedbEq0vHcVsj6dkXHkKbGEN1ZHXtTzcg5jAqAKkoEcAR_MflqgoYWC9Cpp8Lg2et-RNgmvCKgzb0okU1g8M3_E_dVNJcw"/>
+</div>
+<div class="md:col-span-7 flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(320)</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Complete 3-Step Barrier Restoration Kit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes Gentle Cleanser (125ml), Daily Hydrating Cream (100g) &amp; Daily Sunblock SPF 50+ (50ml). Complete regimen for reactive skin.</p>
+<div class="flex flex-wrap gap-space-xs pt-space-2xs">
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Step 01: Cleanse</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Step 02: Repair</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Step 03: Protect</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-lg text-price-lg text-primary">₹1,125</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹1,325</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Free DermaPure Travel Pouch Included</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-xl py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">shopping_basket</span>
+                Add Complete Bundle
+              </button>
+</div>
+</div>
+<!-- Card 8: Hydrating Eye Renewal Gel -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-surface-variant text-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full font-bold">Eye Contour</span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">Peptides</span>
+</div>
+<div class="relative w-full h-52 bg-surface-container-low rounded-lg overflow-hidden my-space-xs flex items-center justify-center">
+<img class="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300" data-alt="Slender clinical eye contour tube of DermaPure Hydrating Eye Renewal Gel with cooling metallic applicator tip in clinical laboratory setting with pure soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtnbfW0Rb7t506_Kh4_nrd1UcGX1DYjmNWVMyifEcpCARFBxB8AxZMgZbo0ISrLVlXHWiBa1R1oMc9DXwAotFwvZpLBr4ttTHICoTDaTlEh4HTWO1gd-QmTAfBoz_dgh1uDX6f8EP8vIiIVnanuOhSIKjT2d_9oi9DgzFXjGe3AviaL19TPYcGT_hj9JwoGHvVmAWETzrnV38ZUaDt2PiNbBTp0H6ZlJDyDnmXLoy6OhW2r3A8bGsOXQ"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">4.7</span>
+<span class="font-body-sm text-body-sm text-outline">(95)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Hydrating Eye Renewal Gel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Targeted peptides and caffeine awaken tired under-eyes, reduce puffiness, and smooth dehydration lines.</p>
+<div class="bg-surface-container-low px-space-xs py-1 rounded-full flex items-center gap-1 my-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Ophthalmologist Tested</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-sm">15ml</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-price-lg text-price-lg text-primary">₹420</span>
+<span class="font-label-sm text-label-sm text-outline">Incl. all taxes</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm hover:opacity-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+                Add
+              </button>
+</div>
+</div>
+</div>
+<!-- Pagination & Progress Indicator -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col items-center gap-space-sm mt-space-md text-center">
+<p class="font-label-md text-label-md text-primary font-bold">Showing 8 of 16 Formulations</p>
+<div class="w-64 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-1/2"></div>
+</div>
+<button class="mt-space-xs bg-surface-container-low text-primary hover:bg-surface-container font-label-md text-label-md px-space-xl py-space-xs rounded-full transition-all shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+            Load More Formulations
+          </button>
+</div>
+</main>
+</div>
+</div>
+<!-- Clinical Guarantee & Regimen Promo Banner -->
+<section class="w-full bg-surface-container-low py-space-2xl mt-space-xl">
+<div class="max-w-container-max mx-auto px-gutter-desktop flex flex-col gap-space-2xl">
+<!-- Diagnosis CTA Card -->
+<div class="bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-lg p-space-xl shadow-md flex flex-col md:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-xs max-w-xl text-center md:text-left">
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded-full self-center md:self-start font-bold">Free Diagnostic</span>
+<h2 class="font-headline-lg text-headline-lg">Not sure which clinical formula fits your skin barrier?</h2>
+<p class="font-body-md text-body-md text-primary-fixed leading-relaxed">
+            Answer 6 simple clinical questions about your barrier health, sensitivity triggers, and climate to receive your customized regimen.
+          </p>
+</div>
+<a class="bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-lg text-label-lg px-space-xl py-space-sm rounded-full transition-all shadow-sm flex items-center gap-space-xs shrink-0" href="#">
+          Take 2-Minute Diagnostic Quiz
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 4 Medical Trust Badges -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col items-center text-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Dermatologist Approved</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated by Indian clinical dermatologists</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col items-center text-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">spa</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">100% Fragrance-Free</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero essential oils or synthetic aromas</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col items-center text-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">local_shipping</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Free Shipping ₹999+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Safe &amp; fast sterile dispatch across India</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col items-center text-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">payments</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Cash on Delivery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">UPI &amp; doorstep pay options available</p>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-container-max mx-auto px-gutter-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-bold">DermaPure</span><span class="bg-surface-variant text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">CLINICAL</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">#1 Dermatologist Recommended Skincare in India. Formulated with scientific rigor to repair and strengthen your natural skin barrier.</p><div class="flex flex-wrap gap-space-xs pt-space-xs"><span class="inline-flex items-center gap-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[14px] text-secondary">verified</span>Fragrance-Free</span><span class="inline-flex items-center gap-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[14px] text-secondary">verified</span>Paraben-Free</span><span class="inline-flex items-center gap-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[14px] text-secondary">verified</span>Hypoallergenic</span><span class="inline-flex items-center gap-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[14px] text-secondary">verified</span>Non-Comedogenic</span></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider font-bold">Quick Links</h4><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="shop-products" href="#">Products</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="build-routine" href="#">Routine Builder</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="faqs" href="#">FAQs</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="skin-guide" href="#">Skin Guide</a></nav></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider font-bold">Customer Care</h4><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="track-order" href="#">Track Order</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="shipping-policy" href="#">Shipping Policy</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="returns-refunds" href="#">Returns &amp; Refunds</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact Us</a></nav></div><div class="flex flex-col gap-space-md"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider font-bold">Clinical Newsletter</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Get 15% off your first clinical order and receive weekly dermatologist skincare insights.</p><div class="flex items-center gap-space-xs"><input class="bg-surface-container-lowest px-space-md py-space-xs rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary flex-1 shadow-[0_1px_4px_rgba(0,0,0,0.02)]" placeholder="Enter your email address" type="email"/><button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full hover:bg-primary-container hover:text-on-primary transition-colors shrink-0">Subscribe</button></div><div class="pt-space-xs"><p class="font-label-sm text-label-sm text-outline mb-space-2xs uppercase tracking-wide">Accepted Payments</p><div class="flex items-center gap-space-xs flex-wrap"><span class="bg-surface-container-lowest px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-bold">UPI</span><span class="bg-surface-container-lowest px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-bold">VISA</span><span class="bg-surface-container-lowest px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-bold">Mastercard</span><span class="bg-surface-container-lowest px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-bold">NetBanking</span></div></div></div></div></div><div class="w-full bg-surface-container py-space-md"><div class="max-w-container-max mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 DermaPure Skincare Ltd. Formulated with Dermatological Science. All rights reserved.</p><div class="flex items-center gap-space-md"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div></div></div></footer></body></html>

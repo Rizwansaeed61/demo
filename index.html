@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DermaPure & DermCare • Clinical E-Commerce Themes Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#002d59',
+              blue: '#004380',
+              accent: '#2f6c00',
+              accentLight: '#aaf779',
+              lightBlue: '#d5e3ff',
+              surface: '#f9f9ff',
+              card: '#ffffff'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-hero {
+      background: radial-gradient(circle at 10% 20%, rgba(213, 227, 255, 0.6) 0%, rgba(249, 249, 255, 1) 70%);
+    }
+  </style>
+</head>
+<body class="bg-brand-surface text-slate-800 font-sans min-h-screen flex flex-col selection:bg-brand-lightBlue selection:text-brand-navy">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-navy text-white text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-[16px] text-brand-accentLight">science</span>
+    <span>Clinical Skincare E-Commerce Themes • Complete 5-Page Multi-Page Store with Cart Drawer & Checkout</span>
+  </div>
+
+  <!-- Main Header -->
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-40 shadow-xs backdrop-blur-md bg-white/95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-brand-accentLight shadow-md">
+          <span class="material-symbols-outlined text-[22px]">medical_services</span>
+        </div>
+        <div>
+          <span class="text-lg font-extrabold text-brand-navy tracking-tight">Theme Studio</span>
+          <span class="ml-2 text-[10px] font-bold uppercase tracking-wider bg-brand-lightBlue text-brand-navy px-2 py-0.5 rounded-full">Clinical Series</span>
+        </div>
+      </div>
+
+      <!-- Quick Nav Action -->
+      <div class="flex items-center gap-3">
+        <a href="#themes-overview" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors px-3 py-1.5 rounded-lg hover:bg-slate-50">
+          Themes Overview
+        </a>
+        <a href="#interactive-preview" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors px-3 py-1.5 rounded-lg hover:bg-slate-50">
+          Interactive Viewport
+        </a>
+        <a href="#specs-comparison" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors px-3 py-1.5 rounded-lg hover:bg-slate-50">
+          Architecture
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-hero py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200/60">
+    <div class="max-w-6xl mx-auto text-center flex flex-col items-center">
+      <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-blue-200/60 px-3.5 py-1 rounded-full text-xs font-semibold text-brand-navy shadow-sm mb-4">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Interactive Store Engine Active • Slide-Out Cart, Routine Builder & Checkout</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy tracking-tight max-w-3xl leading-tight">
+        DermaPure Clinical Skincare Store
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+        A production-grade, connected clinical e-commerce store with persistent cart state, a slide-out cart drawer, dynamic 3-step routine regimen customizer, filterable catalog, and Indian payment gateway checkout.
+      </p>
+
+      <!-- Stats Pill Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 w-full max-w-3xl">
+        <div class="bg-white/90 p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center">
+          <span class="text-2xl font-black text-brand-navy">5</span>
+          <span class="text-xs text-slate-500 font-medium">Connected Pages</span>
+        </div>
+        <div class="bg-white/90 p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center">
+          <span class="text-2xl font-black text-brand-accent">100%</span>
+          <span class="text-xs text-slate-500 font-medium">Working Cart Drawer</span>
+        </div>
+        <div class="bg-white/90 p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center">
+          <span class="text-2xl font-black text-brand-blue">3-Step</span>
+          <span class="text-xs text-slate-500 font-medium">Routine Builder</span>
+        </div>
+        <div class="bg-white/90 p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center">
+          <span class="text-2xl font-black text-slate-700">UPI / COD</span>
+          <span class="text-xs text-slate-500 font-medium">Checkout Experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes Overview Section -->
+  <section id="themes-overview" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Store Packages</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy">Explore The Available Themes</h2>
+      </div>
+      <p class="text-sm text-slate-500 max-w-md">
+        DermaPure is fully built out with complete cart, routine, and checkout features. DermCare is available as an alternative clinical design variant.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Card 1: DermaPure Flagship -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="p-6 bg-gradient-to-r from-blue-900 via-[#002d59] to-sky-950 text-white relative">
+          <div class="flex items-center justify-between mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#aaf779] text-[#092100] uppercase tracking-wider">Full Interactive Store</span>
+            <span class="text-xs text-blue-200 font-medium">Plus Jakarta Sans</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">DermaPure Clinical Store</h3>
+          <p class="text-xs text-blue-100 mt-1">Complete 5-page e-commerce funnel with global cart drawer, dynamic routine builder, and checkout.</p>
+        </div>
+
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+          <!-- Page Link Badges -->
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Included Templates:</span>
+            
+            <div class="grid grid-cols-1 gap-2">
+              <!-- Home -->
+              <a href="theme-dermapure/index.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-navy flex items-center justify-center font-bold text-xs group-hover:bg-brand-navy group-hover:text-white transition-colors">
+                    01
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-navy">Home Page</h4>
+                    <p class="text-xs text-slate-500">Hero, clinical claims, 4-col bestsellers, 3-step routine bundle, VIP banner</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-brand-navy group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+
+              <!-- Collection -->
+              <a href="theme-dermapure/collection.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-navy flex items-center justify-center font-bold text-xs group-hover:bg-brand-navy group-hover:text-white transition-colors">
+                    02
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-navy">Skincare Collection (Catalog)</h4>
+                    <p class="text-xs text-slate-500">Live dynamic filtering (concern, category, actives, price, sort) + instant add</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-brand-navy group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+
+              <!-- Product -->
+              <a href="theme-dermapure/product.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-navy flex items-center justify-center font-bold text-xs group-hover:bg-brand-navy group-hover:text-white transition-colors">
+                    03
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-navy">Gentle Skin Cleanser Product Page</h4>
+                    <p class="text-xs text-slate-500">Image gallery, 125ml/250ml/500ml radio cards, bundle builder, clinical tabs</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-brand-navy group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+
+              <!-- Routine Builder -->
+              <a href="theme-dermapure/routine-builder.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-100 hover:border-emerald-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                    04
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-navy">Interactive Routine Regimen Builder</h4>
+                    <p class="text-xs text-slate-500">Concern diagnostic, layer customizer (AM/PM), 15% automatic bundle discount</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+
+              <!-- Checkout -->
+              <a href="theme-dermapure/checkout.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-navy flex items-center justify-center font-bold text-xs group-hover:bg-brand-navy group-hover:text-white transition-colors">
+                    05
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-navy">Clinical Checkout & Order Receipt</h4>
+                    <p class="text-xs text-slate-500">Address form, delivery options, UPI/Card/COD tabs, confirmation modal</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-brand-navy group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Color Swatches & Action -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-[#002d59] border border-slate-300" title="Primary #002d59"></span>
+              <span class="w-5 h-5 rounded-full bg-[#2f6c00] border border-slate-300" title="Secondary #2f6c00"></span>
+              <span class="w-5 h-5 rounded-full bg-[#aaf779] border border-slate-300" title="Secondary Fixed #aaf779"></span>
+              <span class="w-5 h-5 rounded-full bg-[#d5e3ff] border border-slate-300" title="Primary Fixed #d5e3ff"></span>
+              <span class="text-xs text-slate-400 ml-1">Palette</span>
+            </div>
+            <button onclick="loadInPreview('theme-dermapure/index.html', 'DermaPure Home')" class="text-xs font-bold uppercase tracking-wider text-brand-navy bg-brand-lightBlue hover:bg-blue-200 px-3.5 py-2 rounded-lg transition-colors">
+              Open In Previewer ↓
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: DermCare Variant -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="p-6 bg-gradient-to-r from-slate-900 to-indigo-950 text-white relative">
+          <div class="flex items-center justify-between mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-lime-400 text-slate-900 uppercase tracking-wider">Alternative Design</span>
+            <span class="text-xs text-indigo-200 font-medium">Inter Typography</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">DermCare Laboratories</h3>
+          <p class="text-xs text-indigo-100 mt-1">Alternative clinical aesthetic with interactive concerns filter bar and circular study charts.</p>
+        </div>
+
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Included Templates:</span>
+            
+            <div class="grid grid-cols-1 gap-2.5">
+              <!-- Home -->
+              <a href="theme-dermcare/index.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-indigo-50 border border-slate-100 hover:border-indigo-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-900 flex items-center justify-center font-bold text-xs group-hover:bg-indigo-900 group-hover:text-white transition-colors">
+                    01
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-900">Home Page</h4>
+                    <p class="text-xs text-slate-500">Concern filter chips, circular study SVG graphs, live toast cart alerts</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-indigo-900 group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+
+              <!-- Product -->
+              <a href="theme-dermcare/product.html" class="group flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-indigo-50 border border-slate-100 hover:border-indigo-200 transition-all">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-900 flex items-center justify-center font-bold text-xs group-hover:bg-indigo-900 group-hover:text-white transition-colors">
+                    02
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-900">Gentle Skin Cleanser Product Page</h4>
+                    <p class="text-xs text-slate-500">Clean single column layout, size pills, dynamic bundle calculations</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-indigo-900 group-hover:translate-x-1 transition-all text-[18px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Color Swatches & Action -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-[#003461] border border-slate-300" title="Primary #003461"></span>
+              <span class="w-5 h-5 rounded-full bg-[#3d6a00] border border-slate-300" title="Secondary #3d6a00"></span>
+              <span class="w-5 h-5 rounded-full bg-[#acf75a] border border-slate-300" title="Secondary Fixed #acf75a"></span>
+              <span class="w-5 h-5 rounded-full bg-[#d3e4ff] border border-slate-300" title="Primary Fixed #d3e4ff"></span>
+              <span class="text-xs text-slate-400 ml-1">Palette</span>
+            </div>
+            <button onclick="loadInPreview('theme-dermcare/index.html', 'DermCare Home')" class="text-xs font-bold uppercase tracking-wider text-indigo-900 bg-indigo-100 hover:bg-indigo-200 px-3.5 py-2 rounded-lg transition-colors">
+              Open In Previewer ↓
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Device Viewport Previewer -->
+  <section id="interactive-preview" class="py-12 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Live Simulator</span>
+          <h2 class="text-2xl font-bold text-white">Interactive Viewport Preview</h2>
+        </div>
+
+        <!-- Controls: Page Selector & Device Width -->
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Page Dropdown -->
+          <select id="preview-page-select" onchange="changePreviewPage(this.value)" class="bg-slate-800 border border-slate-700 text-white text-xs rounded-lg px-3 py-2 font-medium focus:ring-2 focus:ring-emerald-400 focus:outline-none">
+            <optgroup label="DermaPure (Full Store)">
+              <option value="theme-dermapure/index.html" selected>DermaPure - Home Page</option>
+              <option value="theme-dermapure/collection.html">DermaPure - Skincare Collection (Catalog)</option>
+              <option value="theme-dermapure/product.html">DermaPure - Product Detail (Gentle Cleanser)</option>
+              <option value="theme-dermapure/routine-builder.html">DermaPure - Routine Regimen Builder</option>
+              <option value="theme-dermapure/checkout.html">DermaPure - Clinical Checkout</option>
+            </optgroup>
+            <optgroup label="DermCare (Alternative Theme)">
+              <option value="theme-dermcare/index.html">DermCare - Home Page</option>
+              <option value="theme-dermcare/product.html">DermCare - Product Detail</option>
+            </optgroup>
+          </select>
+
+          <!-- Device Buttons -->
+          <div class="flex items-center bg-slate-800 p-1 rounded-lg border border-slate-700">
+            <button onclick="setViewport('100%', this)" class="device-btn active px-2.5 py-1 rounded text-xs font-medium text-emerald-400 bg-slate-700">
+              Desktop
+            </button>
+            <button onclick="setViewport('768px', this)" class="device-btn px-2.5 py-1 rounded text-xs font-medium text-slate-400 hover:text-white">
+              Tablet (768px)
+            </button>
+            <button onclick="setViewport('390px', this)" class="device-btn px-2.5 py-1 rounded text-xs font-medium text-slate-400 hover:text-white">
+              Mobile (390px)
+            </button>
+          </div>
+
+          <!-- Open in new tab -->
+          <a id="external-preview-link" href="theme-dermapure/index.html" target="_blank" class="flex items-center gap-1 text-xs bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-3 py-2 rounded-lg transition-colors">
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            <span>New Window</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Preview Iframe Frame -->
+      <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex justify-center items-center overflow-hidden min-h-[720px]">
+        <div id="viewport-container" class="w-full transition-all duration-300 h-[700px] rounded-xl overflow-hidden shadow-2xl border border-slate-800 bg-white">
+          <iframe id="preview-iframe" src="theme-dermapure/index.html" class="w-full h-full border-0"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs & Architecture -->
+  <section id="specs-comparison" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="mb-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Design Architecture</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy">Theme Architecture & Features</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Box 1: File Organization -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-navy flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined">folder_zip</span>
+        </div>
+        <h3 class="text-base font-bold text-brand-navy mb-2">Clean Directory Structure</h3>
+        <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+          Both themes are isolated into clean standalone directories with connected relative links and persistent storage.
+        </p>
+        <ul class="text-xs text-slate-600 space-y-1 font-mono bg-slate-50 p-3 rounded-lg border border-slate-100">
+          <li class="font-bold text-slate-800">📁 theme-dermapure/</li>
+          <li class="pl-4">├── index.html (Home)</li>
+          <li class="pl-4">├── collection.html (Catalog)</li>
+          <li class="pl-4">├── product.html (PDP)</li>
+          <li class="pl-4">├── routine-builder.html (Quiz)</li>
+          <li class="pl-4">├── checkout.html (Checkout)</li>
+          <li class="pl-4">├── store.js (Cart Engine)</li>
+          <li class="pl-4">└── DESIGN.md</li>
+        </ul>
+      </div>
+
+      <!-- Box 2: Features & Interactions -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-brand-accent flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined">shopping_basket</span>
+        </div>
+        <h3 class="text-base font-bold text-brand-navy mb-2">E-Commerce Features</h3>
+        <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+          Full interactive functionality without requiring a backend:
+        </p>
+        <ul class="text-xs text-slate-600 space-y-2">
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+            <span>Slide-out Cart Drawer with live free shipping bar</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+            <span>Promo code DERMA10 (10% OFF) & WELCOME15</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+            <span>Dynamic 3-step routine builder with 15% bundle savings</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+            <span>Complete checkout with UPI QR, Cards & COD modal</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Box 3: Extensibility -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined">rocket_launch</span>
+        </div>
+        <h3 class="text-base font-bold text-brand-navy mb-2">Platform Extensibility</h3>
+        <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+          These templates are modular and ready for any future platform migration:
+        </p>
+        <ul class="text-xs text-slate-600 space-y-2">
+          <li class="flex items-center gap-2">
+            <span class="font-bold text-slate-900">• Shopify:</span>
+            <span>Liquid sections & JSON templates</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="font-bold text-slate-900">• React / Next.js:</span>
+            <span>Easily componentize for modern SPA/SSR</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="font-bold text-slate-900">• Static Hosting:</span>
+            <span>Instantly deployable on Netlify or Vercel</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-white border-t border-slate-200 py-6 px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+    <p>© 2025 Clinical E-Commerce Themes Studio • DermaPure & DermCare Systems</p>
+  </footer>
+
+  <!-- Script for Viewport Switcher -->
+  <script>
+    function setViewport(width, btn) {
+      const container = document.getElementById('viewport-container');
+      container.style.maxWidth = width;
+      
+      document.querySelectorAll('.device-btn').forEach(b => {
+        b.classList.remove('active', 'text-emerald-400', 'bg-slate-700');
+        b.classList.add('text-slate-400');
+      });
+      btn.classList.add('active', 'text-emerald-400', 'bg-slate-700');
+      btn.classList.remove('text-slate-400');
+    }
+
+    function changePreviewPage(url) {
+      document.getElementById('preview-iframe').src = url;
+      document.getElementById('external-preview-link').href = url;
+    }
+
+    function loadInPreview(url, name) {
+      document.getElementById('preview-page-select').value = url;
+      changePreviewPage(url);
+      document.getElementById('interactive-preview').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
