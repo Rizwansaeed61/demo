@@ -1,0 +1,27 @@
+{
+  "current": {
+    "color_primary": "#002d59",
+    "color_secondary": "#2f6c00",
+    "color_accent_light": "#aaf779",
+    "color_surface": "#f9f9ff",
+    "color_text": "#191c20",
+    "color_text_muted": "#40484f",
+    "free_shipping_threshold": 75,
+    "announcement_text": "COMPLIMENTARY CLINICAL DERMATOLOGY SHIPPING ON ORDERS OVER $75 • 100% RECYCLABLE PACKAGING",
+    "social_instagram_link": "https://instagram.com",
+    "social_facebook_link": "https://facebook.com",
+    "social_tiktok_link": "https://tiktok.com"
+  },
+  "presets": {
+    "Default": {
+      "color_primary": "#002d59",
+      "color_secondary": "#2f6c00",
+      "color_accent_light": "#aaf779",
+      "color_surface": "#f9f9ff",
+      "color_text": "#191c20",
+      "color_text_muted": "#40484f",
+      "free_shipping_threshold": 75,
+      "announcement_text": "COMPLIMENTARY CLINICAL DERMATOLOGY SHIPPING ON ORDERS OVER $75 • 100% RECYCLABLE PACKAGING"
+    }
+  }
+}

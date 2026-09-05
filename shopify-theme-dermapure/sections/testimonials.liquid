@@ -1,0 +1,82 @@
+<section class="py-16 bg-surface border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="badge-clinical bg-amber-100 text-amber-900 mb-2">Physician Endorsed</span>
+      <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Clinical Evidence in Practice</h2>
+      <p class="text-sm text-slate-500 mt-2">What board-certified dermatologists and patients report after 14 days of physiological barrier therapy.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Review 1 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col">
+        <div class="flex items-center gap-1 text-amber-500 mb-3">
+          {%- for i in (1..5) -%}
+            <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+          {%- endfor -%}
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed flex-1 italic">
+          "The CeraRepair Emulsion is one of the few formulations I recommend unconditionally to patients with acute retinol burn and compromised stratum corneum. It delivers rapid, measurable TEWL reduction without clogging follicles."
+        </p>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">SL</div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">Dr. Sarah Lin, MD, FAAD</h4>
+            <p class="text-[11px] text-slate-500">Board-Certified Dermatologist, NYC</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col">
+        <div class="flex items-center gap-1 text-amber-500 mb-3">
+          {%- for i in (1..5) -%}
+            <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+          {%- endfor -%}
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed flex-1 italic">
+          "After 5 years of battling cystic acne and redness from overly aggressive benzoyl peroxide scrubs, the 3-step DermaPure regimen repaired my barrier in 10 days. My face finally feels calm and hydrated."
+        </p>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs">EM</div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">Elena M. <span class="text-emerald-700 font-semibold text-[10px]">Verified Patient</span></h4>
+            <p class="text-[11px] text-slate-500">Using Barrier Protocol for 6 Months</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col">
+        <div class="flex items-center gap-1 text-amber-500 mb-3">
+          {%- for i in (1..5) -%}
+            <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+          {%- endfor -%}
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed flex-1 italic">
+          "The stability of their 15% Vitamin C formulation is exceptional. Formulated at pH 2.8 with ferulic acid, it provides legitimate photoprotection without the greasy residue common in consumer grade serums."
+        </p>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">MV</div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">Dr. Marcus Vance, MD</h4>
+            <p class="text-[11px] text-slate-500">Director of Clinical Photobiology</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}

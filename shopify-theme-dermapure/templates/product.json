@@ -1,0 +1,22 @@
+{
+  "name": "Clinical Product Page",
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "routine": {
+      "type": "clinical-routine",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "testimonials",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "routine",
+    "reviews"
+  ]
+}

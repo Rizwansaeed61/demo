@@ -1,0 +1,100 @@
+<div id="CartDrawer" class="cart-drawer-container" aria-modal="true" role="dialog">
+  <!-- Overlay Backdrop -->
+  <div class="cart-overlay" data-action="close-cart"></div>
+
+  <!-- Sliding Panel -->
+  <div class="cart-panel">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-lg">medical_information</span>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-slate-900 text-base">Your Clinical Regimen</h3>
+          <span class="text-xs text-slate-500 font-medium"><span data-cart-count>{{ cart.item_count | default: 0 }}</span> items selected</span>
+        </div>
+      </div>
+
+      <button type="button" data-action="close-cart" class="w-9 h-9 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors" aria-label="Close cart">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Bar -->
+    <div class="bg-slate-50 px-6 py-3.5 border-b border-slate-100">
+      <p id="ShippingBarMsg" class="text-xs text-slate-700 leading-snug">
+        Calculating complimentary express shipping...
+      </p>
+      <div class="shipping-bar-track">
+        <div id="ShippingBarFill" class="shipping-bar-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scrollable Container -->
+    <div id="CartDrawerItems" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <!-- Items dynamically populated via theme.js -->
+      {%- if cart.item_count > 0 -%}
+        {%- for item in cart.items -%}
+          <div class="flex items-center gap-4 py-3 border-b border-slate-100">
+            {%- if item.image -%}
+              <img src="{{ item.image | image_url: width: 150 }}" alt="{{ item.title | escape }}" class="w-16 h-16 rounded-xl object-cover bg-slate-100 flex-shrink-0">
+            {%- endif -%}
+            <div class="flex-1 min-w-0">
+              <h4 class="text-sm font-bold text-slate-900 truncate">{{ item.product.title }}</h4>
+              <p class="text-xs text-slate-500">{{ item.variant.title }}</p>
+              <div class="flex items-center justify-between mt-2">
+                <div class="qty-stepper scale-90 -ml-1">
+                  <button type="button" class="qty-btn" onclick="ShopifyCart.updateQuantity('{{ item.key }}', {{ item.quantity | minus: 1 }})">-</button>
+                  <input type="text" class="qty-input" value="{{ item.quantity }}" readonly>
+                  <button type="button" class="qty-btn" onclick="ShopifyCart.updateQuantity('{{ item.key }}', {{ item.quantity | plus: 1 }})">+</button>
+                </div>
+                <span class="text-sm font-bold text-slate-900">{{ item.final_line_price | money }}</span>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        <div class="py-12 text-center text-slate-500">
+          <span class="material-symbols-outlined text-5xl text-slate-300 mb-2">shopping_bag</span>
+          <p class="font-semibold text-slate-700">Your clinical regimen is empty</p>
+          <p class="text-xs text-slate-500 mt-1">Explore our dermatologist-backed active formulas to get started.</p>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Drawer Footer / Checkout -->
+    <div class="p-6 border-t border-slate-100 bg-white shadow-lg">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-sm text-slate-600 font-semibold">Subtotal</span>
+        <span id="CartDrawerSubtotal" class="text-lg font-extrabold text-slate-900">{{ cart.total_price | money | default: '$0.00' }}</span>
+      </div>
+
+      <p class="text-[11px] text-slate-400 mb-4">
+        Taxes, duties, and clinical express shipping calculated at checkout.
+      </p>
+
+      <a href="/checkout" class="btn-primary w-full py-3.5 text-base flex items-center justify-center gap-2 shadow-md">
+        <span>Proceed to Clinical Checkout</span>
+        <span class="material-symbols-outlined text-lg">lock</span>
+      </a>
+
+      <div class="mt-4 flex items-center justify-center gap-4 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
+        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-emerald-600">verified</span> 256-Bit SSL</span>
+        <span>•</span>
+        <span>HSA/FSA Eligible</span>
+        <span>•</span>
+        <span>30-Day Guarantee</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "settings": []
+}
+{% endschema %}

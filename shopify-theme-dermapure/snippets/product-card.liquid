@@ -1,0 +1,95 @@
+{% comment %}
+  Renders a clinical product card
+  Accepts:
+  - product: {Object} Product object
+  - show_badge: {Boolean} Whether to show efficacy badge
+{% endcomment %}
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign price = current_variant.price | default: 4800
+  assign compare_at_price = current_variant.compare_at_price
+-%}
+
+<div class="clinical-card group">
+  <div class="card-media relative aspect-square bg-slate-50 overflow-hidden">
+    <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+      {%- if product.compare_at_price > product.price -%}
+        <span class="badge-clinical bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Clinical Special</span>
+      {%- else -%}
+        <span class="badge-clinical bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Rx Formulated</span>
+      {%- endif -%}
+    </div>
+
+    <a href="{{ product.url | default: '#' }}" class="block w-full h-full">
+      {%- if product.featured_image -%}
+        <img
+          src="{{ product.featured_image | image_url: width: 600 }}"
+          alt="{{ product.title | escape }}"
+          loading="lazy"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          width="600"
+          height="600"
+        >
+      {%- else -%}
+        <div class="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400">
+          <span class="material-symbols-outlined text-4xl">science</span>
+        </div>
+      {%- endif -%}
+    </a>
+
+    <!-- Quick Add Button -->
+    <button
+      type="button"
+      data-quick-add
+      data-variant-id="{{ current_variant.id }}"
+      data-product-title="{{ product.title | escape }}"
+      data-product-price="{{ price | divided_by: 100.0 }}"
+      data-product-image="{% if product.featured_image %}{{ product.featured_image | image_url: width: 300 }}{% endif %}"
+      class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md shadow-md hover:bg-primary hover:text-white flex items-center justify-center text-slate-800 transition-all duration-200"
+      title="Quick Add Formulation"
+    >
+      <span class="material-symbols-outlined text-xl leading-none">add</span>
+    </button>
+  </div>
+
+  <div class="p-5 flex flex-col flex-1">
+    <div class="flex items-center gap-1.5 mb-1.5 text-xs text-amber-500 font-semibold">
+      <div class="flex items-center">
+        {%- for i in (1..5) -%}
+          <span class="material-symbols-outlined text-[14px] leading-none fill-current">star</span>
+        {%- endfor -%}
+      </div>
+      <span class="text-slate-500 font-normal">4.9 (120+ clinical tests)</span>
+    </div>
+
+    <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-primary transition-colors">
+      <a href="{{ product.url | default: '#' }}">{{ product.title }}</a>
+    </h3>
+
+    <p class="text-xs text-slate-500 mt-1 line-clamp-2">
+      {{ product.description | strip_html | truncate: 90 | default: 'Pure clinical strength actives with bio-fermented barrier support.' }}
+    </p>
+
+    <div class="mt-auto pt-4 flex items-center justify-between border-t border-slate-100">
+      <div>
+        <span class="text-base font-extrabold text-slate-900">{{ price | money }}</span>
+        {%- if compare_at_price > price -%}
+          <span class="text-xs text-slate-400 line-through ml-1">{{ compare_at_price | money }}</span>
+        {%- endif -%}
+      </div>
+
+      <button
+        type="button"
+        data-quick-add
+        data-variant-id="{{ current_variant.id }}"
+        data-product-title="{{ product.title | escape }}"
+        data-product-price="{{ price | divided_by: 100.0 }}"
+        data-product-image="{% if product.featured_image %}{{ product.featured_image | image_url: width: 300 }}{% endif %}"
+        class="text-xs font-bold text-primary hover:text-emerald-700 uppercase tracking-wider flex items-center gap-1"
+      >
+        <span>+ Add</span>
+      </button>
+    </div>
+  </div>
+</div>

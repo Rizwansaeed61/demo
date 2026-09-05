@@ -1,0 +1,173 @@
+<section class="py-16 bg-white border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+      <div>
+        <span class="badge-clinical bg-emerald-50 text-emerald-800 mb-2">
+          {{ section.settings.badge | default: "High-Potency Actives" }}
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          {{ section.settings.heading | default: "Core Clinical Formulations" }}
+        </h2>
+        <p class="text-sm text-slate-500 mt-1 max-w-xl">
+          {{ section.settings.subheading | default: "Backed by peer-reviewed dermatology research, formulated at precise therapeutic pH levels." }}
+        </p>
+      </div>
+
+      <a href="{{ section.settings.collection.url | default: '/collections/all' }}" class="mt-4 md:mt-0 text-sm font-bold text-primary hover:text-primary-dark flex items-center gap-1 group">
+        <span>View Complete Pharmacopeia</span>
+        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {%- if section.settings.collection != blank and section.settings.collection.products_count > 0 -%}
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Clinical Demo Products Fallback for Instant Wow Experience -->
+        
+        <!-- Demo Card 1 -->
+        <div class="clinical-card group">
+          <div class="card-media relative aspect-square bg-slate-50 overflow-hidden">
+            <span class="absolute top-3 left-3 z-10 badge-clinical bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" alt="DermaPure Active CeraRepair" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <button type="button" data-quick-add data-variant-id="demo_1" data-product-title="CeraRepair™ Cellular Lipid Emulsion" data-product-price="58.00" data-product-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 shadow-md hover:bg-primary hover:text-white flex items-center justify-center text-slate-800 transition-all">
+              <span class="material-symbols-outlined text-xl leading-none">add</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-1.5 mb-1 text-xs text-amber-500 font-semibold">
+              <span class="material-symbols-outlined text-[14px]">star</span>
+              <span class="text-slate-500">4.9 (420 reviews)</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base leading-snug">CeraRepair™ Cellular Lipid Emulsion</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Multi-ceramide 3:1:1 physiological barrier lipid restoration with squalane.</p>
+            <div class="mt-auto pt-4 flex items-center justify-between border-t border-slate-100">
+              <span class="text-base font-extrabold text-slate-900">$58.00</span>
+              <button type="button" data-quick-add data-variant-id="demo_1" data-product-title="CeraRepair™ Cellular Lipid Emulsion" data-product-price="58.00" data-product-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" class="text-xs font-bold text-primary hover:text-emerald-700 uppercase tracking-wider">+ Add to Regimen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Card 2 -->
+        <div class="clinical-card group">
+          <div class="card-media relative aspect-square bg-slate-50 overflow-hidden">
+            <span class="absolute top-3 left-3 z-10 badge-clinical bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">15% Actives</span>
+            <img src="https://images.unsplash.com/photo-1608248597359-00977d40bc84?w=600&q=80" alt="DermaPure Triple Niacinamide Serum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <button type="button" data-quick-add data-variant-id="demo_2" data-product-title="PureNiacin 10% + Zinc PCA 1%" data-product-price="42.00" data-product-image="https://images.unsplash.com/photo-1608248597359-00977d40bc84?w=600&q=80" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 shadow-md hover:bg-primary hover:text-white flex items-center justify-center text-slate-800 transition-all">
+              <span class="material-symbols-outlined text-xl leading-none">add</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-1.5 mb-1 text-xs text-amber-500 font-semibold">
+              <span class="material-symbols-outlined text-[14px]">star</span>
+              <span class="text-slate-500">4.8 (310 reviews)</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base leading-snug">PureNiacin 10% + Zinc PCA 1%</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Pore minimizer and sebum regulator engineered for reactive and congested dermis.</p>
+            <div class="mt-auto pt-4 flex items-center justify-between border-t border-slate-100">
+              <span class="text-base font-extrabold text-slate-900">$42.00</span>
+              <button type="button" data-quick-add data-variant-id="demo_2" data-product-title="PureNiacin 10% + Zinc PCA 1%" data-product-price="42.00" data-product-image="https://images.unsplash.com/photo-1608248597359-00977d40bc84?w=600&q=80" class="text-xs font-bold text-primary hover:text-emerald-700 uppercase tracking-wider">+ Add to Regimen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Card 3 -->
+        <div class="clinical-card group">
+          <div class="card-media relative aspect-square bg-slate-50 overflow-hidden">
+            <span class="absolute top-3 left-3 z-10 badge-clinical bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Antioxidant Rx</span>
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" alt="DermaPure C-Ferulic Concentrated Serum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <button type="button" data-quick-add data-variant-id="demo_3" data-product-title="C-Ferulic 15% Clinical Complex" data-product-price="74.00" data-product-image="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 shadow-md hover:bg-primary hover:text-white flex items-center justify-center text-slate-800 transition-all">
+              <span class="material-symbols-outlined text-xl leading-none">add</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-1.5 mb-1 text-xs text-amber-500 font-semibold">
+              <span class="material-symbols-outlined text-[14px]">star</span>
+              <span class="text-slate-500">5.0 (580 reviews)</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base leading-snug">C-Ferulic 15% Clinical Complex</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">L-ascorbic acid, ferulic acid, and alpha tocopherol at clinical pH 2.8.</p>
+            <div class="mt-auto pt-4 flex items-center justify-between border-t border-slate-100">
+              <span class="text-base font-extrabold text-slate-900">$74.00</span>
+              <button type="button" data-quick-add data-variant-id="demo_3" data-product-title="C-Ferulic 15% Clinical Complex" data-product-price="74.00" data-product-image="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" class="text-xs font-bold text-primary hover:text-emerald-700 uppercase tracking-wider">+ Add to Regimen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Card 4 -->
+        <div class="clinical-card group">
+          <div class="card-media relative aspect-square bg-slate-50 overflow-hidden">
+            <span class="absolute top-3 left-3 z-10 badge-clinical bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Mineral UV</span>
+            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" alt="DermaPure Invisible Physical Shield SPF 50" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <button type="button" data-quick-add data-variant-id="demo_4" data-product-title="Invisible Physical Shield SPF 50+" data-product-price="38.00" data-product-image="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 shadow-md hover:bg-primary hover:text-white flex items-center justify-center text-slate-800 transition-all">
+              <span class="material-symbols-outlined text-xl leading-none">add</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-1.5 mb-1 text-xs text-amber-500 font-semibold">
+              <span class="material-symbols-outlined text-[14px]">star</span>
+              <span class="text-slate-500">4.9 (890 reviews)</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base leading-snug">Invisible Physical Shield SPF 50+</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">100% non-nano zinc oxide with zero white cast and blue light DNA defense.</p>
+            <div class="mt-auto pt-4 flex items-center justify-between border-t border-slate-100">
+              <span class="text-base font-extrabold text-slate-900">$38.00</span>
+              <button type="button" data-quick-add data-variant-id="demo_4" data-product-title="Invisible Physical Shield SPF 50+" data-product-price="38.00" data-product-image="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" class="text-xs font-bold text-primary hover:text-emerald-700 uppercase tracking-wider">+ Add to Regimen</button>
+            </div>
+          </div>
+        </div>
+
+      {%- endif -%}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "High-Potency Actives"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Core Clinical Formulations"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Backed by peer-reviewed dermatology research, formulated at precise therapeutic pH levels."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 4,
+      "default": 4,
+      "label": "Products to show"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

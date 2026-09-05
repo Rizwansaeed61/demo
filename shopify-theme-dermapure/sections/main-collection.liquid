@@ -1,0 +1,63 @@
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Collection Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="badge-clinical bg-emerald-50 text-emerald-800 mb-2">Physician Curated Pharmacopeia</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        {{ collection.title | default: "All Clinical Formulations" }}
+      </h1>
+      <p class="text-sm text-slate-500 mt-2">
+        {{ collection.description | default: "Engineered at biological pH with therapeutic-grade active concentrations. Zero fillers, parabens, or synthetic fragrances." }}
+      </p>
+    </div>
+
+    <!-- Filter & Sort Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-slate-100 text-xs font-semibold text-slate-600">
+      <div class="flex items-center gap-2 overflow-x-auto">
+        <a href="/collections/all" class="px-4 py-2 rounded-full bg-primary text-white font-bold">All Actives</a>
+        <a href="/collections/serums" class="px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700">Serums</a>
+        <a href="/collections/barrier" class="px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700">Barrier Care</a>
+        <a href="/collections/sunscreen" class="px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700">Mineral SPF</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span class="text-slate-400">Sort by:</span>
+        <select class="bg-surface border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-700 font-semibold focus:outline-none">
+          <option>Clinical Best Sellers</option>
+          <option>Highest Potency First</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {%- paginate collection.products by 12 -%}
+        {%- if collection.products.size > 0 -%}
+          {%- for product in collection.products -%}
+            {% render 'product-card', product: product %}
+          {%- endfor -%}
+        {%- else -%}
+          <!-- Demo products for instant preview -->
+          {% render 'product-card' %}
+        {%- endif -%}
+
+        {%- if paginate.pages > 1 -%}
+          <div class="col-span-full py-8 flex justify-center">
+            {{ paginate | default_pagination }}
+          </div>
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Grid",
+  "settings": []
+}
+{% endschema %}

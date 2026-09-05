@@ -1,0 +1,100 @@
+<footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+      
+      <!-- Brand & Mission (2 cols) -->
+      <div class="lg:col-span-2">
+        <a href="/" class="flex items-center gap-2 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-400 text-slate-950 flex items-center justify-center font-bold">
+            <span class="material-symbols-outlined text-2xl">medical_services</span>
+          </div>
+          <div>
+            <span class="text-xl font-extrabold tracking-tight text-white block">DermaPure</span>
+            <span class="text-[9px] uppercase tracking-widest text-emerald-400 font-bold block">Clinical Dermatology</span>
+          </div>
+        </a>
+
+        <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-6">
+          Pharmaceutical-grade dermatological skincare engineered with biomimetic lipid ratios, bio-fermented actives, and micro-molecular hydration. Formulated at physiological skin pH.
+        </p>
+
+        <div class="flex items-center gap-3">
+          {%- if settings.social_instagram_link -%}
+            <a href="{{ settings.social_instagram_link }}" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-400 hover:text-slate-950 flex items-center justify-center text-slate-300 transition-all">
+              <span class="text-xs font-bold">IG</span>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_facebook_link -%}
+            <a href="{{ settings.social_facebook_link }}" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-400 hover:text-slate-950 flex items-center justify-center text-slate-300 transition-all">
+              <span class="text-xs font-bold">FB</span>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_tiktok_link -%}
+            <a href="{{ settings.social_tiktok_link }}" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-400 hover:text-slate-950 flex items-center justify-center text-slate-300 transition-all">
+              <span class="text-xs font-bold">TT</span>
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">Formulations</h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="/collections/all" class="hover:text-emerald-400 transition-colors">All Pharmacopeia</a></li>
+          <li><a href="/collections/serums" class="hover:text-emerald-400 transition-colors">Targeted Actives</a></li>
+          <li><a href="/collections/barrier" class="hover:text-emerald-400 transition-colors">Barrier Care</a></li>
+          <li><a href="/collections/sunscreen" class="hover:text-emerald-400 transition-colors">Mineral Sunscreens</a></li>
+          <li><a href="/pages/routine-builder" class="text-emerald-400 hover:underline">3-Step Routine Builder</a></li>
+        </ul>
+      </div>
+
+      <!-- Clinical Science -->
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">Clinical Science</h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="/pages/clinical-trials" class="hover:text-emerald-400 transition-colors">Clinical Trial Data</a></li>
+          <li><a href="/pages/ingredients" class="hover:text-emerald-400 transition-colors">Active Ingredient Library</a></li>
+          <li><a href="/blogs/clinical-journal" class="hover:text-emerald-400 transition-colors">Dermatology Journal</a></li>
+          <li><a href="/pages/physician-network" class="hover:text-emerald-400 transition-colors">Physician Network</a></li>
+          <li><a href="/pages/faq" class="hover:text-emerald-400 transition-colors">Clinical FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Patient & Practice Support -->
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">Support & Orders</h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="/pages/shipping-returns" class="hover:text-emerald-400 transition-colors">Clinical Delivery Policy</a></li>
+          <li><a href="/pages/guarantee" class="hover:text-emerald-400 transition-colors">30-Day Guarantee</a></li>
+          <li><a href="/pages/contact" class="hover:text-emerald-400 transition-colors">Medical Liaison Desk</a></li>
+          <li><a href="/pages/wholesale" class="hover:text-emerald-400 transition-colors">Clinic Wholesale</a></li>
+          <li><a href="/pages/privacy" class="hover:text-emerald-400 transition-colors">HIPAA & Privacy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar & Clinical Disclaimers -->
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+      <p>
+        &copy; {{ 'now' | date: '%Y' }} {{ shop.name | default: 'DermaPure Laboratories Inc.' }}. All rights reserved. Precision Medical Dermatology.
+      </p>
+
+      <div class="flex items-center gap-6">
+        <span>Terms of Service</span>
+        <span>•</span>
+        <span>Privacy Policy</span>
+        <span>•</span>
+        <span>Formulation Transparency</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

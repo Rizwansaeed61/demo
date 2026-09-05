@@ -19,7 +19,13 @@ A high-converting, multi-page clinical skincare e-commerce store engineered with
 ### 2. Alternative Theme Variant (`theme-dermcare/`)
 - Clinical laboratory aesthetic utilizing the **Inter** font family, alternative color tokens, and SVG circular study results.
 
-### 3. Central Themes Hub (`index.html`)
+### 3. Shopify Online Store 2.0 Theme (`shopify-theme-dermapure/` & `dermapure_shopify_theme.zip`)
+- Full production-ready **Shopify OS 2.0** architecture with JSON templates (`index.json`, `product.json`, `collection.json`, `cart.json`, `404.json`, `page.routine-builder.json`).
+- Live **Shopify Ajax Cart API** integration (`/cart/add.js`, `/cart.js`, `/cart/change.js`) powering the slide-out cart drawer and free shipping progress meter.
+- 16+ modular, customizable Liquid sections with native theme editor schema settings.
+- Upload-ready theme zip: `dermapure_shopify_theme.zip`.
+
+### 4. Central Themes Hub (`index.html`)
 - Interactive viewport simulator allowing live testing of all pages across **Desktop (100%)**, **Tablet (768px)**, and **Mobile (390px)**.
 
 ---
@@ -29,7 +35,15 @@ A high-converting, multi-page clinical skincare e-commerce store engineered with
 ```
 .
 ├── index.html                   # Themes Studio Hub & Responsive Simulator
-├── theme-dermapure/             # Flagship 5-Page Clinical Store
+├── shopify-theme-dermapure/     # Complete Shopify OS 2.0 Theme Source
+│   ├── assets/                  # CSS & Shopify Ajax Cart JS
+│   ├── config/                  # settings_schema.json & settings_data.json
+│   ├── layout/                  # theme.liquid master layout
+│   ├── locales/                 # en.default.json
+│   ├── sections/                # 16+ modular OS 2.0 sections
+│   ├── snippets/                # product-card, price snippets
+│   └── templates/               # OS 2.0 JSON templates
+├── theme-dermapure/             # Flagship 5-Page Clinical Store (HTML/JS)
 │   ├── index.html               # Home Page
 │   ├── collection.html          # Skincare Catalog
 │   ├── product.html             # Gentle Skin Cleanser PDP
@@ -46,7 +60,17 @@ A high-converting, multi-page clinical skincare e-commerce store engineered with
 
 ---
 
-## 🚀 Getting Started
+## 🛍️ How to Install on Shopify
+
+1. Download or grab `dermapure_shopify_theme.zip`.
+2. In your **Shopify Admin**, go to **Online Store** &rarr; **Themes**.
+3. Under **Theme library**, click **Add theme** &rarr; **Upload zip file**.
+4. Select `dermapure_shopify_theme.zip` and upload.
+5. Click **Customize** to edit sections or **Publish** to take the store live!
+
+---
+
+## 🚀 Getting Started Locally
 
 Simply open `index.html` in any modern web browser or serve locally:
 
@@ -57,3 +81,4 @@ python3 -m http.server 8000
 # Open in browser:
 # http://localhost:8000
 ```
+

@@ -1,0 +1,41 @@
+{
+  "general": {
+    "accessibility": {
+      "close": "Close",
+      "skip_to_content": "Skip to content"
+    },
+    "continue_shopping": "Continue Shopping",
+    "view_all": "View All",
+    "search": "Search clinical formulas..."
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Regimen",
+      "sold_out": "Currently Unavailable",
+      "quantity": "Quantity",
+      "regular_price": "Regular price",
+      "sale_price": "Sale price",
+      "unit_price": "Unit price",
+      "clinical_efficacy": "98% Clinical Efficacy",
+      "dermatologist_tested": "Dermatologist Tested"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Your Clinical Regimen",
+      "empty": "Your regimen is currently empty.",
+      "checkout": "Proceed to Clinical Checkout",
+      "subtotal": "Subtotal",
+      "shipping_at_checkout": "Taxes & shipping calculated at checkout",
+      "free_shipping_unlocked": "Congratulations! You've unlocked FREE Clinical Express Delivery.",
+      "free_shipping_away": "Add {{ amount }} more to unlock FREE Clinical Express Shipping."
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Clinical Formula Not Found",
+      "subtext": "The page or clinical formulation you requested does not exist.",
+      "link": "Return to Formulations"
+    }
+  }
+}

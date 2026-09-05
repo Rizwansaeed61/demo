@@ -1,0 +1,191 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400 mb-8">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span>/</span>
+      <a href="/collections/all" class="hover:text-primary">Clinical Formulations</a>
+      <span>/</span>
+      <span class="text-slate-700 font-semibold">{{ product.title }}</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Product Gallery (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col gap-4">
+        <div class="aspect-square rounded-3xl overflow-hidden bg-slate-50 border border-slate-200/80 relative shadow-sm">
+          <div class="absolute top-4 left-4 z-10">
+            <span class="badge-clinical bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Medical Grade Active
+            </span>
+          </div>
+
+          {%- if product.featured_image -%}
+            <img
+              id="MainProductImage"
+              src="{{ product.featured_image | image_url: width: 1000 }}"
+              alt="{{ product.title | escape }}"
+              class="w-full h-full object-cover"
+            >
+          {%- else -%}
+            <img
+              src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=1000&q=85"
+              alt="Clinical Skincare Bottle"
+              class="w-full h-full object-cover"
+            >
+          {%- endif -%}
+        </div>
+
+        {%- if product.images.size > 1 -%}
+          <div class="grid grid-cols-4 gap-4">
+            {%- for image in product.images -%}
+              <button
+                type="button"
+                onclick="document.getElementById('MainProductImage').src='{{ image | image_url: width: 1000 }}'"
+                class="aspect-square rounded-xl overflow-hidden border-2 hover:border-primary transition-all bg-slate-50"
+              >
+                <img src="{{ image | image_url: width: 250 }}" alt="{{ product.title | escape }}" class="w-full h-full object-cover">
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Product Buy Box & Formulation Details (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col">
+        
+        <!-- Ratings & Clinical Badge -->
+        <div class="flex items-center gap-2 mb-2">
+          <div class="flex text-amber-500">
+            {%- for i in (1..5) -%}
+              <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+            {%- endfor -%}
+          </div>
+          <span class="text-xs text-slate-500 font-semibold">4.9/5 • 420 Clinical Evaluations</span>
+        </div>
+
+        <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight leading-tight mb-2">
+          {{ product.title | default: "CeraRepair™ Cellular Lipid Emulsion" }}
+        </h1>
+
+        <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-4">
+          Rx Therapeutic Formulation • pH 4.8
+        </p>
+
+        <!-- Price -->
+        <div class="mb-6">
+          {% render 'price', product: product, use_variant: true %}
+        </div>
+
+        <!-- Short Description -->
+        <div class="prose prose-sm text-slate-600 mb-6 leading-relaxed">
+          {{ product.description | default: "An intensive physiological barrier restoration emulsion engineered with 3:1:1 multi-molecular ceramides, plant-derived squalane, and bio-fermented niacinamide to accelerate stratum corneum recovery and eliminate cellular dehydration." }}
+        </div>
+
+        <!-- Add to Cart Form -->
+        {% form 'product', product, id: 'AddToCartForm', class: 'flex flex-col gap-4 mb-8' %}
+          <input type="hidden" name="id" value="{{ current_variant.id | default: 'prod_default' }}">
+
+          <!-- Variant Selector if Multiple -->
+          {%- unless product.has_only_default_variant -%}
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Select Formulation Size</label>
+              <div class="flex flex-wrap gap-2">
+                {%- for variant in product.variants -%}
+                  <label class="cursor-pointer">
+                    <input type="radio" name="variant_option" value="{{ variant.id }}" {% if forloop.first %}checked{% endif %} class="sr-only peer" onchange="document.querySelector('#AddToCartForm input[name=id]').value='{{ variant.id }}'">
+                    <span class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all block">
+                      {{ variant.title }}
+                    </span>
+                  </label>
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endunless -%}
+
+          <!-- Quantity & CTA -->
+          <div class="flex items-center gap-3 pt-2">
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" onclick="let input=this.nextElementSibling; if(input.value > 1) input.value=parseInt(input.value)-1">-</button>
+              <input type="text" name="quantity" value="1" class="qty-input" readonly>
+              <button type="button" class="qty-btn" onclick="let input=this.previousElementSibling; input.value=parseInt(input.value)+1">+</button>
+            </div>
+
+            <button
+              type="submit"
+              name="add"
+              class="btn-primary flex-1 py-3.5 text-base shadow-lg shadow-primary/20"
+              {% unless current_variant.available %}disabled{% endunless %}
+            >
+              <span class="material-symbols-outlined text-xl">medical_services</span>
+              <span>{% if current_variant.available %}Add to Clinical Regimen{% else %}Sold Out{% endif %}</span>
+            </button>
+          </div>
+        {% endform %}
+
+        <!-- Trust Features Grid -->
+        <div class="grid grid-cols-2 gap-3 py-4 border-t border-b border-slate-100 mb-6 text-xs text-slate-600">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">check</span>
+            <span>Fragrance & Paraben-Free</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">check</span>
+            <span>Non-Comedogenic Tested</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">check</span>
+            <span>Safe for Eczema & Rosacea</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">check</span>
+            <span>Complimentary US Shipping $75+</span>
+          </div>
+        </div>
+
+        <!-- Clinical Tabs / Accordions -->
+        <div class="space-y-3">
+          <details class="group bg-surface p-4 rounded-xl border border-slate-200/70" open>
+            <summary class="font-bold text-xs text-slate-900 uppercase tracking-wider flex items-center justify-between cursor-pointer list-none">
+              <span>Clinical Trial Results</span>
+              <span class="material-symbols-outlined text-base group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed">
+              In a 4-week independent clinical trial on 48 subjects with compromised skin barriers:
+              <ul class="list-disc pl-4 mt-2 space-y-1">
+                <li><strong>98%</strong> showed significant reduction in TEWL (water loss) after 7 days.</li>
+                <li><strong>94%</strong> experienced immediate relief from irritation and prickling sensations.</li>
+                <li><strong>0%</strong> reported follicular clogging or acne flare-ups.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="group bg-surface p-4 rounded-xl border border-slate-200/70">
+            <summary class="font-bold text-xs text-slate-900 uppercase tracking-wider flex items-center justify-between cursor-pointer list-none">
+              <span>Key Active Molecules</span>
+              <span class="material-symbols-outlined text-base group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed">
+              <strong>Ceramide NP, AP, EOP (3:1:1 Ratio):</strong> Identical to natural epidermal lipid bilayers.<br>
+              <strong>Biomimetic Phytosphingosine:</strong> Natural antimicrobial lipid that calms inflammation.<br>
+              <strong>Multi-Weight Hyaluronic Complex:</strong> Transports hydration deep into the stratum spinosum.
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Information",
+  "settings": []
+}
+{% endschema %}

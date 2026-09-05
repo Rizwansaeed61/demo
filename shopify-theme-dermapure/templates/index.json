@@ -1,0 +1,66 @@
+{
+  "name": "Clinical Home Page",
+  "sections": {
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "badge": "Dermatologist-Formulated Medical Skincare",
+        "heading": "Pure Clinical Actives. Proven Molecular Barrier Repair.",
+        "subheading": "Precision dermatology formulations engineered with medical-grade biomimetic ceramides, bio-fermented niacinamide, and micro-molecular hydration. 0% filler, 100% biological absorption.",
+        "primary_cta_text": "Shop Formulations",
+        "primary_cta_url": "/collections/all",
+        "secondary_cta_text": "Build 3-Step Routine",
+        "secondary_cta_url": "/pages/routine-builder",
+        "hero_image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=85"
+      }
+    },
+    "trust": {
+      "type": "trust-strip",
+      "settings": {}
+    },
+    "concerns": {
+      "type": "concern-selector",
+      "settings": {}
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "badge": "High-Potency Actives",
+        "heading": "Core Clinical Formulations",
+        "subheading": "Backed by peer-reviewed dermatology research, formulated at precise therapeutic pH levels.",
+        "products_to_show": 4
+      }
+    },
+    "routine": {
+      "type": "clinical-routine",
+      "settings": {}
+    },
+    "pillars": {
+      "type": "clinical-pillars",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "testimonials",
+      "settings": {}
+    },
+    "journal": {
+      "type": "journal",
+      "settings": {}
+    },
+    "dermaclub": {
+      "type": "dermaclub-banner",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "trust",
+    "concerns",
+    "featured",
+    "routine",
+    "pillars",
+    "reviews",
+    "journal",
+    "dermaclub"
+  ]
+}
