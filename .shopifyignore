@@ -1,0 +1,5 @@
+# Shopify GitHub Integration Ignore List
+static-demos/
+*.zip
+.DS_Store
+*.py

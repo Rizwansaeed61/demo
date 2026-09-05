@@ -1,84 +1,101 @@
-# DermaPure & DermCare • Clinical Skincare E-Commerce Themes
+# DermaPure Clinical OS 2.0 • Official Shopify Theme
 
-A high-converting, multi-page clinical skincare e-commerce store engineered with Tailwind CSS, vanilla JavaScript, and persistent local cart state.
+A production-ready **Shopify Online Store 2.0 Theme** engineered for clinical, medical, and dermatology eCommerce brands. Designed for direct 1-click **Shopify GitHub Integration** or manual `.zip` upload.
 
-![Clinical Themes Hub](theme-dermapure/preview-home.png)
+---
+
+## 🔬 Shopify Online Store 2.0 Architecture
+
+This repository is structured directly at the root for full compatibility with **Shopify Admin &rarr; Online Store &rarr; Themes &rarr; Add Theme &rarr; Connect from GitHub**:
+
+```
+.
+├── assets/                  # CSS stylesheets & Shopify Ajax Cart JS engine
+│   ├── theme.css
+│   └── theme.js
+├── config/                  # Native Shopify Theme Customizer schemas & presets
+│   ├── settings_schema.json
+│   └── settings_data.json
+├── layout/                  # Master liquid layout
+│   └── theme.liquid
+├── locales/                 # Translation & copy strings
+│   └── en.default.json
+├── sections/                # 22+ modular, customizable Liquid sections
+│   ├── announcement-bar.liquid
+│   ├── cart-drawer.liquid
+│   ├── clinical-pillars.liquid
+│   ├── clinical-routine.liquid
+│   ├── concern-selector.liquid
+│   ├── dermaclub-banner.liquid
+│   ├── featured-collection.liquid
+│   ├── footer.liquid
+│   ├── header.liquid
+│   ├── hero-banner.liquid
+│   ├── journal.liquid
+│   ├── main-404.liquid
+│   ├── main-article.liquid
+│   ├── main-blog.liquid
+│   ├── main-cart.liquid
+│   ├── main-collection.liquid
+│   ├── main-list-collections.liquid
+│   ├── main-page.liquid
+│   ├── main-product.liquid
+│   ├── main-search.liquid
+│   ├── testimonials.liquid
+│   └── trust-strip.liquid
+├── snippets/                # Reusable clinical card & price elements
+│   ├── price.liquid
+│   └── product-card.liquid
+├── templates/               # OS 2.0 JSON templates
+│   ├── 404.json
+│   ├── article.json
+│   ├── blog.json
+│   ├── cart.json
+│   ├── collection.json
+│   ├── index.json
+│   ├── list-collections.json
+│   ├── page.json
+│   ├── page.routine-builder.json
+│   ├── product.json
+│   └── search.json
+├── static-demos/            # Static HTML prototypes & Material design tokens
+│   ├── index.html           # Themes Studio Hub & Viewport Simulator
+│   ├── theme-dermapure/     # Vanilla HTML/JS prototype
+│   ├── theme-dermcare/      # Alternative design variant
+│   └── stitch_e_commerce_store_website_design/
+├── .shopifyignore           # Tells Shopify to sync ONLY theme assets
+└── .gitignore
+```
 
 ---
 
 ## 🌟 Key Features
 
-### 1. Complete Multi-Page Store Funnel (`theme-dermapure/`)
-- **Home Page (`index.html`)**: Clinical barrier defense narrative, trust badges, 4-column bestsellers with 1-click add-to-cart, 3-step routine system with live bundle pricing recalculator, and VIP membership discount trigger.
-- **Skincare Catalog (`collection.html`)**: Dynamic client-side filtering by **Skin Concern**, **Category**, **Key Actives**, **Price Slider**, and **Sort dropdown** (Price Low-High, High-Low, Rating, Recommended).
-- **Product Detail Page (`product.html`)**: Interactive thumbnail switcher, volume radio selectors (125ml, 250ml, 500ml), quantity counter, Indian pincode delivery estimator, and clinical evidence tabs.
-- **Interactive Routine Builder (`routine-builder.html`)**: 3-step diagnostic wizard allowing users to diagnose their barrier concern, customize AM/PM layers (Cleanser, Moisturizer, SPF), and save 15% on the entire bundled regimen.
-- **Clinical Checkout (`checkout.html`)**: 3-step patient checkout with address capture, delivery speed toggle, multiple payment methods (**UPI QR**, **Credit/Debit Cards**, **Cash on Delivery**), and order confirmation modal.
-- **Global Cart Engine (`store.js`)**: Slide-out cart drawer with free shipping progress tracker (threshold: ₹999), coupon engine (`DERMA10`, `WELCOME15`), and floating toast notifications.
-
-### 2. Alternative Theme Variant (`theme-dermcare/`)
-- Clinical laboratory aesthetic utilizing the **Inter** font family, alternative color tokens, and SVG circular study results.
-
-### 3. Shopify Online Store 2.0 Theme (`shopify-theme-dermapure/` & `dermapure_shopify_theme.zip`)
-- Full production-ready **Shopify OS 2.0** architecture with JSON templates (`index.json`, `product.json`, `collection.json`, `cart.json`, `404.json`, `page.routine-builder.json`).
-- Live **Shopify Ajax Cart API** integration (`/cart/add.js`, `/cart.js`, `/cart/change.js`) powering the slide-out cart drawer and free shipping progress meter.
-- 16+ modular, customizable Liquid sections with native theme editor schema settings.
-- Upload-ready theme zip: `dermapure_shopify_theme.zip`.
-
-### 4. Central Themes Hub (`index.html`)
-- Interactive viewport simulator allowing live testing of all pages across **Desktop (100%)**, **Tablet (768px)**, and **Mobile (390px)**.
+1. **Native Shopify GitHub Integration**:
+   - The theme root is directly in the root of branch `main` (and branch `shopify`).
+   - Zero configuration needed—connects seamlessly without the "Branch isn't a valid theme" error.
+2. **Shopify Ajax Cart Drawer**:
+   - Integrated with official Shopify endpoints (`/cart/add.js`, `/cart.js`, `/cart/change.js`).
+   - Live free shipping meter dynamically calculating distance to threshold ($75 default, configurable in Theme Settings).
+3. **Interactive 3-Step Routine Bundler**:
+   - Dermatologist-curated Cleanse + Repair + Protect bundle with auto 15% discount and 1-click cart addition.
+4. **Theme Settings Schema (`settings_schema.json`)**:
+   - Easily change brand colors (Clinical Navy, Biological Green, Accent), shipping thresholds, announcements, and social links in the visual theme customizer.
+5. **Full Device Responsiveness**:
+   - Mobile-first, tablet, and desktop optimized with clinical typography (Plus Jakarta Sans).
 
 ---
 
-## 📁 Repository Structure
+## 🛍️ How to Connect to Shopify
 
-```
-.
-├── index.html                   # Themes Studio Hub & Responsive Simulator
-├── shopify-theme-dermapure/     # Complete Shopify OS 2.0 Theme Source
-│   ├── assets/                  # CSS & Shopify Ajax Cart JS
-│   ├── config/                  # settings_schema.json & settings_data.json
-│   ├── layout/                  # theme.liquid master layout
-│   ├── locales/                 # en.default.json
-│   ├── sections/                # 16+ modular OS 2.0 sections
-│   ├── snippets/                # product-card, price snippets
-│   └── templates/               # OS 2.0 JSON templates
-├── theme-dermapure/             # Flagship 5-Page Clinical Store (HTML/JS)
-│   ├── index.html               # Home Page
-│   ├── collection.html          # Skincare Catalog
-│   ├── product.html             # Gentle Skin Cleanser PDP
-│   ├── routine-builder.html     # Interactive Regimen Builder
-│   ├── checkout.html            # Clinical Checkout & Order Confirmation
-│   ├── store.js                 # Cart State & Slide-Out Drawer Engine
-│   └── DESIGN.md                # Material Theme Builder Tokens & Specs
-├── theme-dermcare/              # Alternative Design Variant
-│   ├── index.html               # Home Page
-│   ├── product.html             # Product Page
-│   └── DESIGN.md                # Design System Specs
-└── stitch_e_commerce_store_website_design/ # Raw exported assets & screens
-```
+### Option A: Connect via GitHub (Recommended)
+1. In your **Shopify Admin**, go to **Online Store** &rarr; **Themes**.
+2. Under **Theme library**, click **Add theme** &rarr; **Connect from GitHub**.
+3. Select your GitHub account and choose the repository `Rizwansaeed61/demo`.
+4. Select the branch (`main` or `shopify`).
+5. Click **Connect**. Shopify will instantly validate and install the theme!
 
----
-
-## 🛍️ How to Install on Shopify
-
-1. Download or grab `dermapure_shopify_theme.zip`.
-2. In your **Shopify Admin**, go to **Online Store** &rarr; **Themes**.
-3. Under **Theme library**, click **Add theme** &rarr; **Upload zip file**.
-4. Select `dermapure_shopify_theme.zip` and upload.
-5. Click **Customize** to edit sections or **Publish** to take the store live!
-
----
-
-## 🚀 Getting Started Locally
-
-Simply open `index.html` in any modern web browser or serve locally:
-
-```bash
-# Using python HTTP server:
-python3 -m http.server 8000
-
-# Open in browser:
-# http://localhost:8000
-```
-
+### Option B: Upload Zip
+1. Download `dermapure_shopify_theme.zip`.
+2. In **Online Store** &rarr; **Themes**, click **Add theme** &rarr; **Upload zip file**.
+3. Select `dermapure_shopify_theme.zip` and upload.

@@ -1,0 +1,36 @@
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="badge-clinical bg-blue-50 text-primary mb-2">Pharmacopeia Collections</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Clinical Collections</h1>
+      <p class="text-sm text-slate-500 mt-2">Dermatologist targeted categories by molecular vehicle and skin condition.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {%- for collection in collections -%}
+        <a href="{{ collection.url }}" class="group bg-surface rounded-3xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition-all flex flex-col">
+          <div class="aspect-video bg-slate-100 overflow-hidden relative">
+            {%- if collection.featured_image -%}
+              <img src="{{ collection.featured_image | image_url: width: 600 }}" alt="{{ collection.title | escape }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            {%- else -%}
+              <div class="w-full h-full flex items-center justify-center text-slate-300">
+                <span class="material-symbols-outlined text-5xl">category</span>
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">{{ collection.title }}</h3>
+            <p class="text-xs text-slate-500 mt-1">{{ collection.products_count }} formulations available</p>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collections List",
+  "settings": []
+}
+{% endschema %}

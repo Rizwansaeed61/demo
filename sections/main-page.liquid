@@ -1,0 +1,17 @@
+<section class="py-16 bg-white min-h-[50vh]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">
+      {{ page.title }}
+    </h1>
+    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+      {{ page.content }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page Content",
+  "settings": []
+}
+{% endschema %}

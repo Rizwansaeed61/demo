@@ -1,0 +1,48 @@
+<section class="py-16 bg-white min-h-[50vh]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+        {%- if search.performed -%}
+          Search Results for "{{ search.terms }}"
+        {%- else -%}
+          Search Clinical Formulations
+        {%- endif -%}
+      </h1>
+      
+      <form action="{{ routes.search_url }}" method="get" class="mt-6 flex gap-2 max-w-md mx-auto">
+        <input
+          type="search"
+          name="q"
+          value="{{ search.terms | escape }}"
+          placeholder="Search active molecules, ceramides, SPF..."
+          class="flex-1 px-4 py-2.5 rounded-full border border-slate-300 text-sm focus:outline-none focus:border-primary"
+        >
+        <button type="submit" class="btn-primary py-2.5 px-6 text-xs">Search</button>
+      </form>
+    </div>
+
+    {%- if search.performed -%}
+      {%- if search.results_count > 0 -%}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {%- for item in search.results -%}
+            {%- if item.object_type == 'product' -%}
+              {% render 'product-card', product: item %}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <div class="text-center py-12 text-slate-500">
+          <p class="font-bold text-slate-700">No formulations found for "{{ search.terms }}".</p>
+          <a href="/collections/all" class="text-xs font-bold text-primary hover:underline mt-2 inline-block">Browse all formulations &rarr;</a>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Search Results",
+  "settings": []
+}
+{% endschema %}
